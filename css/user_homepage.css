@@ -1,0 +1,464 @@
+/*--------------------------------------------------------------------------------------*/
+                                /*CSS TO HTML BODY*/
+/*--------------------------------------------------------------------------------------*/
+
+  body{margin: 0%;}
+  ::selection{background-color: orange;color:white;}
+
+/*--------------------------------------------------------------------------------------*/
+                                /*CSS TO HEADER*/
+/*--------------------------------------------------------------------------------------*/
+
+  #header_container{background-color:gray;height:160px}
+  #header_container div#museum_logo{background-color:white;width:13%;height:160px;float:left;display:flex;align-items:center;justify-content:center;}
+  #header_container div#museum_logo img{width:130px;height:130px}
+  #header_container div#museum_name{background-color:white;width:20%;height:160px;float:left;display:flex;align-items:center;}
+  #header_container div#museum_name label{color:rgba(0,0,0,0.7);font-size:210%;}
+  #header_container div#museum_address{background-color:white;width:35%;height:160px;float:left;display:flex;align-items:center;justify-content:center;}
+  #header_container div#museum_address label{color:rgba(0,0,0,0.7);font-size:120%;}
+  #header_container div#museum_time{background-color:white;width:20%;height:160px;float:left;display:flex;align-items:center;}
+  #header_container div#museum_time label{color:rgba(0,0,0,0.7);font-size:100%;}
+  #header_container div#museum_booking{background-color:white;width:12%;height:160px;float:left;display:flex;align-items:center;justify-content:center;}
+  #header_container div#museum_booking button{padding:10px 20px;float:right;background-color: rgba(0,0,0,0.6);color:white;}
+  #header_container div#museum_booking button:hover{background-color: rgba(0,0,0,1);color:white;}
+  
+/*--------------------------------------------------------------------------------------*/
+/*--------------------------------------------------------------------------------------*/
+
+/*--------------------------------------------------------------------------------------*/
+                        /*CSS TO HORIZONTAL TOP NAVIGATION BAR*/
+/*--------------------------------------------------------------------------------------*/
+
+/*css to the top navigation bar*/
+  #topnav_container{background-color:green;height:53px;position:sticky;top:0%;}
+  #topnav ul{
+    list-style-type:none;
+    margin-top:0; 
+    padding:0;
+    overflow:hidden; 
+    background-color:rgba(0,0,0,0.3);
+    font-size: 15px;
+  }
+  #topnav li{
+    float:left;
+  }
+  #topnav li#active{
+    float:right;
+  }
+  #topnav li a{
+    display:inline-block; 
+    padding:18px 25px;
+    color:white;
+    text-decoration: none; 
+    border-right: 1px solid #d1d1d1;
+    /*box-shadow: 3px 0 0 #444;*/
+  }
+  #topnav li a:hover:not(#login){
+    background-color:rgba(0,0,0,0.9);
+    color:orange;
+    border-right: 3px solid lightgreen;
+    border-left: 3px solid lightgreen;
+    /*border-bottom: 3px solid orange;*/
+  }
+  #topnav li a:hover{
+    background-color:rgba(0,0,0,0.7);
+    color:white;
+  }
+
+  #topnav div#about_div,#topnav div#registration_div,#topnav div#view_div,#topnav div#update_div,#topnav div#contact_div{
+    position:absolute;
+    background-color:rgba(235,235,235,1); 
+    min-width: 200px;
+    box-shadow: 0px 8px 16px 0px rgba(0,0,0,0.6);
+    z-index:1;
+    border-left: none;
+    border-right: none;
+    /*for pop up effect*/
+    margin: 30px 0 0 0;
+    _margin: 0; 
+    opacity: 0;
+    visibility: hidden;
+    transition: all .3s ease-in-out;
+  }
+  #topnav div#about_div a,#topnav div#registration_div a,#topnav div#view_div a,#topnav div#update_div a,#topnav div#contact_div a{
+    display:block;
+    color:black;
+    padding: 12px 20px;
+    border-right:none;
+    box-shadow: none;
+    /*border-bottom: 1px solid #d1d1d1;*/                                 
+  }
+  #topnav div#about_div a:not(a:last-child),#topnav div#registration_div a:not(a:last-child),#topnav div#view_div a:not(a:last-child),#topnav div#update_div a:not(a:last-child),#topnav div#contact_div a:not(a:last-child){
+    /*border-bottom: 1px solid #d1d1d1;*/                                 
+  }
+
+  #topnav div#about_div a:hover,#topnav div#registration_div a:hover,#topnav div#view_div a:hover,#topnav div#update_div a:hover,#topnav div#contact_div a:hover{
+    border:none;
+    background-color: rgba(0,0,0,0.8);
+  }
+  #topnav li#about_list:hover #about_div,#topnav li#registration_list:hover #registration_div,#topnav li#view_list:hover #view_div,#topnav li#update_list:hover #update_div,#topnav li#contact_list:hover #contact_div{
+    opacity: 1;
+    visibility: visible;
+    margin: 0;
+  }
+
+/*--------------------------------------------------------------------------------------*/
+/*--------------------------------------------------------------------------------------*/
+
+/*css to message icon effect*/
+#topnav li div a:first-child:after {
+  content: '';
+  position: absolute;
+  left: 35px;
+  top: -10px;
+  border-left: 12px solid transparent;
+  border-right: 12px solid transparent;
+  border-bottom: 10px solid rgba(235,235,235,1);
+}
+#topnav li div a:first-child:hover:after{
+    border-bottom-color:  rgba(0,0,0,0.8);
+}
+
+/*--------------------------------------------------------------------------------------*/
+                            /*CSS TO BACKGROUND IMAGE & INTRO*/
+/*--------------------------------------------------------------------------------------*/
+
+#image_container{background-color:red;height:1100px;position:relative;}
+#image_container div#image img{width:100%;height:1100px;box-shadow:0 2px 2px 0 black;}
+#image_container div#introduction{;background-color:;width:100%;position:absolute;display:flex;align-items:center;justify-content:center;top:50%;opacity:0;visibility:hidden;transition:all 1s ease-in-out;}
+#image_container:hover #introduction{top:44%;opacity:1;visibility:visible;}
+#image_container div#introduction label{font-size:300%;color:white}
+
+
+/*--------------------------------------------------------------------------------------*/
+                                     /*CSS TO ALPONA*/
+/*--------------------------------------------------------------------------------------*/
+
+#after_background_img{background-color:;height:70px;}
+#after_background_img div:first-child{background-color:;width:100%;height:70px;display:flex;justify-content:center;}
+#after_background_img div:first-child canvas{background-color:;float:left;}
+
+
+/*--------------------------------------------------------------------------------------*/
+                                /*CSS TO FLOATING NOTICE*/
+/*--------------------------------------------------------------------------------------*/
+
+#f_notice_container{
+  background-color:rgba(235,235,23,0.8);
+  width:100%;
+  overflow: hidden;
+  margin-top:-3px
+}
+#f_notice_container  h3{
+  text-align:;
+  color:rgba(100,0,200,0.8);
+  animation: scroll-left 30s linear infinite;
+}
+@keyframes scroll-left{
+  0%{transform: translateX(100%);}
+  100%{transform: translateX(-100%);}
+}
+
+
+/*--------------------------------------------------------------------------------------*/
+                                /*CSS TO BACKGROUND SLIDER*/
+/*--------------------------------------------------------------------------------------*/
+#background_slider{background-color:transparent;width:100%;height: 700px;position:relative;overflow: hidden}
+#background_slider img{height:700px;width:100%;}
+#background_slider div{height:700px;width:100%;position:absolute;}
+
+#div1{
+  background-color:;
+  left:0%;
+  animation: slide1 15s infinite ;
+}
+#div2{
+  background-color:;
+  left:-100%;
+  animation: slide2 15s infinite;
+}
+#div3{
+  background-color:;
+  left:100%;
+  animation: slide3 15s infinite;
+}
+
+@keyframes slide1 {
+    0%{left:0%;z-index:3}
+    50%{left:100%;z-index:1}
+    100%{left:-100%;z-index:3}
+
+}
+@keyframes slide2 {
+    0%{left:-100%;z-index:2}
+    50%{left:0%;z-index:2}
+    100%{left:100%;z-index:2}
+
+}
+@keyframes slide3 {
+    0%{left:100%;z-index:1}
+    50%{left:-100%;z-index: 1;}
+    100%{left:0%;z-index: 3}
+
+}
+
+
+/*--------------------------------------------------------------------------------------*/
+                              /*CSS TO DOWN SLIDE ARROW*/
+/*--------------------------------------------------------------------------------------*/
+
+#down_slide_arrow{background-color:;height:200px;overflow:auto;display:flex;align-items: center;justify-content: center;border-top:3px solid rgba(0,0,0,0.2);}
+#down_slide_arrow label{font-size:500%;color:rgb(5,2,0,0.6);position:relative;animation: arrow 1s infinite;}
+@keyframes arrow{
+  0%{top:0px;}
+  50%{top:45px;}
+  100%{top:0px;}
+}
+
+/*--------------------------------------------------------------------------------------*/
+                                /*CSS TO HISTORY*/
+/*--------------------------------------------------------------------------------------*/
+
+#history_container{background-color:;height:500px;overflow:auto}
+  #history_container div#history{background-color:;float:left;width:60%;height:500px;position:relative;}
+  #history_container div#history div#history_text{background-color:;width:95%;height:400px;position:absolute;top:50%;left:50%;transform:translate(-50%,-50%);}
+  #history_container div#history_image{background-color:;float:right;width:40%;height:500px;display:flex;align-items:center;justify-content:center}
+  #history_container div#history_image img{border-radius: 50%;position:relative;animation: craddle 8s infinite}
+
+@keyframes craddle {
+  0%{left: 40px;}
+  50% {left: -85px;}
+  100%{left:40px;}
+}
+#history_container div#history_image img{box-shadow: 0 5px 25px 0 black;margin-top:25px;}
+
+/*--------------------------------------------------------------------------------------*/
+                                /*CSS TO M/Y EXHIBITION*/
+/*--------------------------------------------------------------------------------------*/
+#m_y_exhibition_container{background-color:;height:150px;}
+#m_y_exhibition_container div:first-child{background-color:rgba(0,4,5,0.6);}
+#m_y_exhibition_container div:first-child table{width:100%;text-align: center;}
+#m_y_exhibition_container div:first-child table a{text-decoration: none;color:rgba(235,235,235,0.9)}
+#m_y_exhibition_container td:hover{background-color:rgba(0,0,0,1);opacity: 0.8;border:2px solid lightgreen;}
+
+/*--------------------------------------------------------------------------------------*/
+                                /*CSS TO WHAT WE HAVE*/
+/*--------------------------------------------------------------------------------------*/
+#what_we_have_container{background-color:;height:500px;padding:30px;overflow: auto;}
+#what_we_have_container div#content{background-color:;float:right;width:55%;height:500px;}
+#what_we_have_container div#content div#tour{background-color:;width:45%;float:left;height:500px;padding-left:40px;overflow:auto;}
+#what_we_have_container div#content div#tour ul{background-color:;line-height:20px}
+#what_we_have_container div#content div#gallery{background-color:;width:45%;float:right;height:500px;overflow: auto;}
+#what_we_have_container div#content div#gallery ul{background-color:;line-height:40px}
+/*vedio section*/
+#what_we_have_container div#video{background-color:rgba(0,0,0,0.7);float:left;width:40%;height:500px;text-align: center;border-radius: 30px;box-shadow: 0 7px 20px 0 rgba(0,0,0,0.8)}
+#what_we_have_container div#video div:first-child{color:rgba(235,235,235,0.9);height:50px}
+#what_we_have_container div#video div:first-child label{font-size: 200%}
+#what_we_have_container div#video div#video_museum365{width: 100%;height:400px;}
+#what_we_have_container div#video div#video_museum365 video{width:100%;height:100%;background-color: black}
+#what_we_have_container div#video div:last-child{color:rgba(235,235,250,0.9);height:50px}
+#what_we_have_container div#video div:last-child label{font-size: 200%}
+/*---------*/
+
+#what_we_have_container div#content a{text-decoration: none;color:rgba(0,0,12,0.8);}
+#what_we_have_container div#content h3{color:orange;}
+#what_we_have_container div#content h2{color:orange;}
+
+/*--------------------------------------------------------------------------------------*/
+                                /*CSS TO UPCOMING EXHIBITIONS*/
+/*--------------------------------------------------------------------------------------*/
+/*----------*/
+#upcoming_exhibition_indicater{background-color: rgba(250,250,250,0.3);width:100%;height: 200px;display: flex;align-items: center;justify-content: center;}
+#upcoming_exhibition_indicater h1{animation: blink 2s infinite;}
+@keyframes blink{
+  0%{opacity:0;}
+  25%{opacity:0.5;}
+  50%{opacity:1;}
+  75%{opacity:0.5;}
+  100%{opacity:0;}
+}
+/*-----------------------------------------------------------------*/
+#upcoming_exhibition_container{background-color:;height:600px;}
+/*---------------------*/
+#upcoming_exhibition{background-color:;height:500px}
+#all_special_exhibition{background-color:;height:100px}
+/*------------------------------------------------------------------*/
+#upcoming_exhibition_poster1{background-color:;width:35%;height:500px;float:left}
+#upcoming_exhibition_poster2{background-color:;width:35%;height:500px;float:right}
+#upcoming_exhibition_photo{background-color:;width:30%;height:500px;float:left;display:flex;align-items: center;justify-content: center}
+/*----------------------------------------------------------*/
+/*----------------------------------------------------------*/
+#upcoming_exhibition_poster1_1,#upcoming_exhibition_poster1_2,#upcoming_exhibition_poster2_1,#upcoming_exhibition_poster2_2{position: relative;background-color:;width:100%;height:250px;float:left}
+/*--------*/
+#upcoming_exhibition_poster1_1 div:first-child,#upcoming_exhibition_poster1_2 div:first-child,#upcoming_exhibition_poster2_1 div:first-child,#upcoming_exhibition_poster2_2 div:first-child{background-color:;width:90%;height:150px;position: absolute;top:50%;left:50%;transform: translate(-50%,-50%);}
+/*--------*/
+#upcoming_exhibition_poster1_1 div:first-child + div,#upcoming_exhibition_poster1_2 div:first-child + div,#upcoming_exhibition_poster2_1 div:first-child + div,#upcoming_exhibition_poster2_2 div:first-child + div{background-color:rgba(0,0,0,0.2);width:70%;height:150px;position: absolute;top:50%;left:50%;transform: translate(-50%,-50%); display:flex;align-items: center;justify-content: center;text-align: center}
+/*--------*/
+#upcoming_exhibition_poster1_1 div:last-child,#upcoming_exhibition_poster1_2 div:last-child,#upcoming_exhibition_poster2_1 div:last-child,#upcoming_exhibition_poster2_2 div:last-child{background-color:orange;width:50%;height:100px;position:absolute;left:50%;transform: translate(-50%,0%);display:flex;align-items: center;justify-content: center;padding:0 10px;text-align: center;}
+/*--------*/
+#upcoming_exhibition_poster1_1 div:first-child + div label,#upcoming_exhibition_poster1_2 div:first-child + div label,#upcoming_exhibition_poster2_1 div:first-child + div label,#upcoming_exhibition_poster2_2 div:first-child + div label{color:white;font-size: 120%}
+/*--------*/
+#upcoming_exhibition_poster1_1 div:first-child + div a,#upcoming_exhibition_poster1_2 div:first-child + div a,#upcoming_exhibition_poster2_1 div:first-child + div a,#upcoming_exhibition_poster2_2 div:first-child + div a{text-decoration: none;color:white}
+/*--------*/
+#upcoming_exhibition_poster1_1 div:last-child a,#upcoming_exhibition_poster1_2 div:last-child a,#upcoming_exhibition_poster2_1 div:last-child a,#upcoming_exhibition_poster2_2 div:last-child a{color:black;text-decoration: none;}
+/*--------*/
+#upcoming_exhibition_poster1_1 div:last-child a:hover,#upcoming_exhibition_poster1_2 div:last-child a:hover,#upcoming_exhibition_poster2_1 div:last-child a:hover,#upcoming_exhibition_poster2_2 div:last-child a:hover{color:white;}
+/*--------*/
+#upcoming_exhibition_poster1 img,#upcoming_exhibition_poster2 img{width:100%;height:150px}
+/*----------------------------------------------------------*/
+/*----------------------------------------------------------*/
+#upcoming_exhibition_photo img{width:80%;height: 450px;border-radius:50%;box-shadow: 0 10px 30px 0 rgba(0,0,0,0.9);
+  position: relative;animation: craddle2 5s infinite;}
+@keyframes craddle2 {
+    0%{left: 70px;}
+    50% {left: -70px;}
+    100%{left:70px;}
+}
+/*------------------------------------------------------------------*/
+#all_special_exhibition{display:flex;align-items: center;justify-content: center;}
+#all_special_exhibition a{font-size: 120%;color:red;text-decoration: none;}
+
+
+
+/*--------------------------------------------------------------------------------------*/
+                                    /*CSS TO ABOUT SECTION*/
+/*--------------------------------------------------------------------------------------*/
+
+#about_container{background-color:;height:500px;}
+#about_container div:first-child{background-color:;width:100%;height:30px;display:flex;align-items:center;justify-content:center;}
+#about_container div:first-child label{font-size:90%;color:rgba(0,0,45,0.8);}
+#about_container div:first-child + div{background-color:;width:100%;height:70px;text-align:center}
+#about_container div:first-child + div label{font-size: 300%;color:blue;opacity:0.6}
+#about_container div:first-child + div + div{background-color:;width:100%;height:80px;display:flex;justify-content:center;}
+#about_container div:first-child + div + div canvas{background-color:;float:left;}
+#about_container div:first-child + div + div + div{background-color:;width:100%;height:150px;text-align: center;overflow:auto}
+#about_container div:first-child + div + div + div label{color:rgba(0,0,0,0.7);font-size:110%;line-height:20px;}
+#about_container div:last-child{background-color:;width:100%;height:100px;display:flex;align-items: center;justify-content: center;border-bottom:3px solid rgba(0,0,0,0.5)}
+#about_container div:last-child a{font-size: 120%;color:red;text-decoration: none;}
+/*430px total*/
+
+/*--------------------------------------------------------------------------------------*/
+                                     /*CSS TO BEFORE GALLERY*/
+/*--------------------------------------------------------------------------------------*/
+
+#before_gallery{background-color:;height:200px;}
+#before_gallery div:first-child{background-color:;width:100%;height:30px;display:flex;align-items:center;justify-content:center;}
+#before_gallery div:first-child label{font-size:90%;color:rgba(0,0,45,0.8);}
+#before_gallery div:first-child + div{background-color:;width:100%;height:70px;text-align:center}
+#before_gallery div:first-child + div label{font-size: 400%;color:orange;opacity:0.6}
+#before_gallery div:last-child{background-color:;width:100%;height:80px;display:flex;justify-content:center;}
+#before_gallery div:last-child canvas{background-color:;float:left;}
+/*180px total*/
+
+/*--------------------------------------------------------------------------------------*/
+                                         /*CSS TO GALLERY*/
+/*--------------------------------------------------------------------------------------*/
+
+#gallery_container{background-color:;height:600px;}
+#gallery_container div#gallery_row1{background-color:pink;height:300px}
+#gallery_container div#gallery_row2{background-color:orange;height:300px}
+
+#gallery_container div#gallery_row1 div#arts_gallery,#gallery_container div#gallery_row1 div#animals_gallery,#gallery_container div#gallery_row1 div#birds_gallery,#gallery_container div#gallery_row2 div#egypt_gallery,#gallery_container div#gallery_row2 div#fossils_gallery,#gallery_container div#gallery_row2 div#insects_gallery{height:300px;width:33.33%;float:left;position:relative;}
+
+#gallery_container div#gallery_row1 div#arts_gallery,#gallery_container div#gallery_row2 div#egypt_gallery{background-color:red;z-index:3;}
+#gallery_container div#gallery_row1 div#animals_gallery,#gallery_container div#gallery_row2 div#fossils_gallery{background-color:yellow;z-index:2;}
+#gallery_container div#gallery_row1 div#birds_gallery,#gallery_container div#gallery_row2 div#insects_gallery{background-color:pink;z-index:1;}
+
+
+#gallery_container div#gallery_row1 div#arts_gallery  div,#gallery_container div#gallery_row1 div#animals_gallery  div,#gallery_container div#gallery_row1 div#birds_gallery  div,#gallery_container div#gallery_row2 div#egypt_gallery  div,#gallery_container div#gallery_row2 div#fossils_gallery  div,#gallery_container div#gallery_row2 div#insects_gallery  div{
+  background-color:rgba(23,2,23,0.9);
+  width:100%;
+  height:300px;
+  position: absolute;
+  top:0px;
+  /*for heading inside it*/
+  display:flex;
+  align-items:center;
+  justify-content:center;
+  font-size: 180%;
+  /*content: "Click To View";*/
+  /*for animation*/
+  left:-100%;
+  opacity:0;
+  visibility:hidden;
+  transition: all 0.6s ease-in-out;
+} 
+#gallery_container div#gallery_row1 div#arts_gallery:hover div,#gallery_container div#gallery_row1 div#animals_gallery:hover div,#gallery_container div#gallery_row1 div#birds_gallery:hover div,#gallery_container div#gallery_row2 div#egypt_gallery:hover div,#gallery_container div#gallery_row2 div#fossils_gallery:hover div,#gallery_container div#gallery_row2 div#insects_gallery:hover div{
+  left:0;
+  visibility: visible;
+  opacity:0.7;
+}
+#gallery_container a{text-decoration: none; color:rgba(255,250,255,1);}
+#gallery_container img{width:100%;height:300px;}
+
+/*--------------------------------------------------------------------------------------*/
+                                     /*CSS TO FOOTER*/
+/*--------------------------------------------------------------------------------------*/
+
+/*container*/
+#footer_container{background-color:#404040;height:500px;}
+/*visit number*/
+#footer_container div#visit_number{background-color:;width:100%;height:100px;display:flex;align-items:center;justify-content:center;border-bottom:3px solid rgba(0,0,0,0.5)}
+#footer_container div#visit_number label{font-size: 200%;color:rgba(250,235,240,0.9);}
+/*footer logo*/
+#footer_container div#footer_logo{background-color:;width:25%;height:300px;float:left;}
+#footer_container div#footer_logo div:first-child{background-color:;height:100px;display:flex;align-items:center;justify-content:center}
+#footer_container div#footer_logo div:first-child label{font-size: 140%;color:white;border-bottom:3px solid orange;padding-bottom:20px}
+#footer_container div#footer_logo div:last-child{background-color:;height:200px;display:flex;align-items:center;justify-content:center}
+#footer_container div#footer_logo div:last-child img{width: 100px;height:100px;opacity:0.7;}
+/*footer link*/
+#footer_container div#footer_link{background-color:;width:25%;height:400px;float:left}
+#footer_container div#footer_link div:first-child{background-color:;height:100px;display:flex;align-items:center;}
+#footer_container div#footer_link div:first-child label{font-size:140%;color:white;border-bottom:3px solid orange;padding-bottom:20px;width:70%;}
+#footer_container div#footer_link div:last-child{background-color:;height:300px;}
+#footer_container div#footer_link div:last-child a{color:rgba(235,235,235,0.7);text-decoration:none}
+/*footer address*/
+#footer_container div#footer_address{background-color:;width:25%;height:400px;float:left}
+#footer_container div#footer_address div:first-child{background-color:;height:100px;display:flex;align-items:center;}
+#footer_container div#footer_address div:first-child label{font-size:140%;color:white;border-bottom:3px solid orange;padding-bottom:20px;width:100%}
+#footer_container div#footer_address div:last-child{background-color:;height:300px}
+#footer_container div#footer_address div:last-child label{color:rgba(235,235,235,0.7)}
+/*footer social media*/
+#footer_container div#footer_social_media{background-color:;width:25%;height:400px;float:left;}
+#footer_container div#footer_social_media div:first-child{background-color:;height:100px;display:flex;align-items:center;justify-content:center}
+#footer_container div#footer_social_media div:first-child label{font-size:140%;color:white;border-bottom:3px solid orange;padding-bottom:20px;}
+#footer_container div#footer_social_media div:last-child{background-color:;height:300px;text-align:center;}
+#footer_container div#footer_social_media div:last-child img{width: 180px;height:280px;border-radius:50%}
+/*footer 2*/
+#footer2{background-color:rgba(0,0,0,0.9);height:100px;}
+#footer2 label:first-child{color:rgba(235,235,235,0.7);font-size: 150%;position: relative;top:30%}
+#footer2 label:last-child{color:orange;opacity:0.8;font-size: 200%;position: relative;top:30%}
+
+
+
+/*--------------------------------------------------------------------------------------*/
+                                  /*CSS TO USER MENU*/
+/*--------------------------------------------------------------------------------------*/
+
+ #menu_container{height:500px;width:30%;background-color:;position:absolute;top:213px;z-index:99;display:none;opacity:0;overflow:auto;}
+ #menu_section{background-color:rgba(235,235,235,0.7);height:600px;width:100%;}
+ #user_photo_container{background-color:;height:160px;width:100%;display:flex;align-items:center;justify-content:center}
+ #user_photo{background-color:;height:140px;width:40%;}
+ #user_photo_container div#user_photo img{width:100%;height:130px;border-radius:50%}
+ #user_name{background-color:;height:30px;width:100%;display:flex;align-items:center;justify-content:center}
+ #user_email{background-color:;height:20px;width:100%;display:flex;justify-content:center}
+ #user_email_change{background-color:;height:20px;width:100%;display:flex;justify-content:center;align-items:center;}
+ #user_udpdate_profile{background-color:white;height:40px;width:100%;display:flex;align-items:center;justify-content:center;margin-top:10px;}
+ #user_udpdate_profile label{cursor:pointer;}
+ #pop_up_update_menu_container{background-color:lightgreen;height:150px;width:100%;display:flex;align-items:center;justify-content:center;margin-top:10px;display:none;opacity:0;}
+ #pop_up_update_menu{background-color:white;height:150px;width:100%;}
+ #pop_up_update_col{background-color:white;width:100%;height:50px;display:flex;align-items:center;justify-content:center;}
+ #user_promotion{background-color:white;height:40px;width:100%;display:flex;align-items:center;justify-content:center;margin-top:10px}
+ #user_logout{background-color:white;height:40px;width:100%;display:flex;align-items:center;justify-content:center;margin-top:10px}
+ #user_close_window{background-color:;height:40px;width:100%;display:flex;align-items:center;justify-content:center;margin-top:10px}
+ #close_window_button{padding:8px 15px;background-color:;}
+ #close_window_button:hover{background-color:#3399FF;color:white;}
+
+ #user_email_change label a{text-decoration:none;color:red;}
+ #pop_up_update_menu a{text-decoration:none;color:rgba(0,0,0,0.9);}
+ #user_promotion a{text-decoration:none;color:rgba(0,20,20,0.9);}
+ #user_logout a{text-decoration:none;color:red;}
+
+
+/*--------------------------------------------------------------------------------------*/
+/*--------------------------------------------------------------------------------------*/

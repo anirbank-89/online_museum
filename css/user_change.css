@@ -1,0 +1,266 @@
+/*--------------------------------------------------------------------------------------*/
+                                /*CSS TO HTML BODY*/
+/*--------------------------------------------------------------------------------------*/
+
+  body{margin: 0%;}
+  ::selection{background-color: orange;color:white;}
+
+/*--------------------------------------------------------------------------------------*/
+                                /*CSS TO HEADER*/
+/*--------------------------------------------------------------------------------------*/
+
+  #header_container{background-color:gray;height:160px}
+  #header_container div#museum_logo{background-color:white;width:13%;height:160px;float:left;display:flex;align-items:center;justify-content:center;}
+  #header_container div#museum_logo img{width:130px;height:130px}
+  #header_container div#museum_name{background-color:white;width:20%;height:160px;float:left;display:flex;align-items:center;}
+  #header_container div#museum_name label{color:rgba(0,0,0,0.7);font-size:210%;}
+  #header_container div#museum_address{background-color:white;width:35%;height:160px;float:left;display:flex;align-items:center;justify-content:center;}
+  #header_container div#museum_address label{color:rgba(0,0,0,0.7);font-size:120%;}
+  #header_container div#museum_time{background-color:white;width:20%;height:160px;float:left;display:flex;align-items:center;}
+  #header_container div#museum_time label{color:rgba(0,0,0,0.7);font-size:100%;}
+  #header_container div#museum_booking{background-color:white;width:12%;height:160px;float:left;display:flex;align-items:center;justify-content:center;}
+  #header_container div#museum_booking button{padding:10px 20px;float:right;background-color: rgba(0,0,0,0.6);color:white;}
+  #header_container div#museum_booking button:hover{background-color: rgba(0,0,0,1);color:white;}
+  
+/*--------------------------------------------------------------------------------------*/
+/*--------------------------------------------------------------------------------------*/
+
+/*--------------------------------------------------------------------------------------*/
+                        /*CSS TO HORIZONTAL TOP NAVIGATION BAR*/
+/*--------------------------------------------------------------------------------------*/
+
+/*css to the top navigation bar*/
+  #topnav_container{background-color:green;height:53px;position:sticky;top:0%;}
+  #topnav ul{
+    list-style-type:none;
+    margin-top:0; 
+    padding:0;
+    overflow:hidden; 
+    background-color:rgba(0,0,0,0.3);
+    font-size: 15px;
+  }
+  #topnav li{
+    float:left;
+  }
+  #topnav li#active{
+    float:right;
+  }
+  #topnav li a:not(#login){
+    display:inline-block; 
+    padding:18px 25px;
+    color:white;
+    text-decoration: none; 
+    border-right: 1px solid #d1d1d1;
+    /*box-shadow: 3px 0 0 #444;*/
+  }
+  #topnav li a#login{
+    display:block; 
+    padding:5px 30px;
+    margin-top:14px;
+    color:white;
+    text-decoration:none;
+  }
+  #topnav li a:hover:not(#login){
+    background-color:rgba(0,0,0,0.9);
+    color:orange;
+    border-right: 3px solid lightgreen;
+    border-left: 3px solid lightgreen;
+    /*border-bottom: 3px solid orange;*/
+  }
+  #topnav li a#login:hover{
+    background-color:rgba(0,0,0,0.7);
+    color:white;
+    border-radius: 20px;
+    box-shadow: 0 2px 0 0 rgba(235,235,235,0.5);
+  }
+   #topnav li a#login:active{
+    background-color:lightgreen;
+    opacity:0.8;
+    color:black;
+    box-shadow: 0 2px 0 0 rgba(235,235,235,0.5);
+  }
+
+  #topnav div#about_div,#topnav div#registration_div,#topnav div#view_div,#topnav div#update_div,#topnav div#contact_div{
+    position:absolute;
+    background-color:rgba(235,235,235,1); 
+    min-width: 200px;
+    box-shadow: 0px 8px 16px 0px rgba(0,0,0,0.6);
+    z-index:1;
+    border-left: none;
+    border-right: none;
+    /*for pop up effect*/
+    margin: 30px 0 0 0;
+    _margin: 0; 
+    opacity: 0;
+    visibility: hidden;
+    transition: all .3s ease-in-out;
+  }
+  #topnav div#about_div a,#topnav div#registration_div a,#topnav div#view_div a,#topnav div#update_div a,#topnav div#contact_div a{
+    display:block;
+    color:black;
+    padding: 12px 20px;
+    border-right:none;
+    box-shadow: none;
+    /*border-bottom: 1px solid #d1d1d1;*/                                 
+  }
+  #topnav div#about_div a:not(a:last-child),#topnav div#registration_div a:not(a:last-child),#topnav div#view_div a:not(a:last-child),#topnav div#update_div a:not(a:last-child),#topnav div#contact_div a:not(a:last-child){
+    /*border-bottom: 1px solid #d1d1d1;*/                                 
+  }
+
+  #topnav div#about_div a:hover,#topnav div#registration_div a:hover,#topnav div#view_div a:hover,#topnav div#update_div a:hover,#topnav div#contact_div a:hover{
+    border:none;
+    background-color: rgba(0,0,0,0.8);
+  }
+  #topnav li#about_list:hover #about_div,#topnav li#registration_list:hover #registration_div,#topnav li#view_list:hover #view_div,#topnav li#update_list:hover #update_div,#topnav li#contact_list:hover #contact_div{
+    opacity: 1;
+    visibility: visible;
+    margin: 0;
+  }
+
+/*--------------------------------------------------------------------------------------*/
+/*--------------------------------------------------------------------------------------*/
+
+/*css to message icon effect*/
+#topnav li div a:first-child:after {
+  content: '';
+  position: absolute;
+  left: 35px;
+  top: -10px;
+  border-left: 12px solid transparent;
+  border-right: 12px solid transparent;
+  border-bottom: 10px solid rgba(235,235,235,1);
+}
+#topnav li div a:first-child:hover:after{
+    border-bottom-color:  rgba(0,0,0,0.8);
+}
+
+
+/*--------------------------------------------------------------------------------------*/
+                                     /*CSS CHANGE PANEL*/
+/*--------------------------------------------------------------------------------------*/
+
+
+#change_container{background-color:rgba(235,235,235,0.1);height:600px;width:100%;display:flex;align-items:center;justify-content:center;}
+#change_section{background-color:rgba(0,0,0,0.1);height:250px;width:40%;box-shadow:5px 5px 5px 0 rgba(0,0,0,0.7)}
+#col1{background-color:;width:40%;height:50px;float:left;display:flex;align-items:center;justify-content:center;}
+#col2{background-color:;width:60%;height:50px;float:left;display:flex;align-items:center;justify-content:center;}
+#col3{background-color:;width:100%;float:left;display:flex;justify-content:center;}
+#col1 label{font-size:110%;color:black;}
+#error_email,#error_password,#success_password{font-size:80%;}
+
+/*-------------------------------------------------------*/
+input[name=password],input[name=old_password],input[name=new_password],input[name=confirm_password],input[name=new_email]{width:70%;border-radius:10px;border:2px solid black;transition-duration: 0.5s;padding-left: 3%;padding-right:10% ;padding-top: 2%;padding-bottom: 2%;}
+input:hover{box-shadow: 0 -2px 10px 0 orange,0 2px 10px 0 orange;transition-duration: 0.5s;border:2px solid lightgreen;}
+input:focus{box-shadow: 0 -2px 10px 0 orange,0 2px 10px 0 orange;transition-duration: 0.5s;border:2px solid lightgreen;}
+
+input[name=password],input[name=old_password],input[name=new_password],input[name=confirm_password]{width:50%;}
+/*----------------------------------------------------------------------------------------------*/
+/*-----------Css On submit Button---------------------*/
+input[type=submit]{width:80%;border-radius:10px;border:2px solid black;transition-duration: 0.5s;color:white;background-color:#3399FF;font-weight: bold;cursor:pointer;padding: 3%}
+input[type=submit]:hover{box-shadow: 0 -5px 5px 0 lightgreen,0 5px 5px 0 lightgreen;transition-duration: 0.5s;border:2px solid white;}
+
+
+
+/*--------------------------------------------------------------------------------------*/
+                                     /*CSS TO ALPONA*/
+/*--------------------------------------------------------------------------------------*/
+
+#after_background_img{background-color:;height:70px;}
+#after_background_img div:first-child{background-color:;width:100%;height:70px;display:flex;justify-content:center;}
+#after_background_img div:first-child canvas{background-color:;float:left;}
+
+/*--------------------------------------------------------------------------------------*/
+                                     /*CSS TO BEFORE GALLERY*/
+/*--------------------------------------------------------------------------------------*/
+
+#before_gallery{background-color:;height:200px;}
+#before_gallery div:first-child{background-color:;width:100%;height:30px;display:flex;align-items:center;justify-content:center;}
+#before_gallery div:first-child label{font-size:90%;color:rgba(0,0,45,0.8);}
+#before_gallery div:first-child + div{background-color:;width:100%;height:70px;text-align:center}
+#before_gallery div:first-child + div label{font-size: 400%;color:orange;opacity:0.6}
+#before_gallery div:last-child{background-color:;width:100%;height:80px;display:flex;justify-content:center;}
+#before_gallery div:last-child canvas{background-color:;float:left;}
+/*180px total*/
+
+/*--------------------------------------------------------------------------------------*/
+                                         /*CSS TO GALLERY*/
+/*--------------------------------------------------------------------------------------*/
+
+#gallery_container{background-color:;height:600px;}
+#gallery_container div#gallery_row1{background-color:pink;height:300px}
+#gallery_container div#gallery_row2{background-color:orange;height:300px}
+
+#gallery_container div#gallery_row1 div#arts_gallery,#gallery_container div#gallery_row1 div#animals_gallery,#gallery_container div#gallery_row1 div#birds_gallery,#gallery_container div#gallery_row2 div#egypt_gallery,#gallery_container div#gallery_row2 div#fossils_gallery,#gallery_container div#gallery_row2 div#insects_gallery{height:300px;width:33.33%;float:left;position:relative;}
+
+#gallery_container div#gallery_row1 div#arts_gallery,#gallery_container div#gallery_row2 div#egypt_gallery{background-color:red;z-index:3;}
+#gallery_container div#gallery_row1 div#animals_gallery,#gallery_container div#gallery_row2 div#fossils_gallery{background-color:yellow;z-index:2;}
+#gallery_container div#gallery_row1 div#birds_gallery,#gallery_container div#gallery_row2 div#insects_gallery{background-color:pink;z-index:1;}
+
+
+#gallery_container div#gallery_row1 div#arts_gallery  div,#gallery_container div#gallery_row1 div#animals_gallery  div,#gallery_container div#gallery_row1 div#birds_gallery  div,#gallery_container div#gallery_row2 div#egypt_gallery  div,#gallery_container div#gallery_row2 div#fossils_gallery  div,#gallery_container div#gallery_row2 div#insects_gallery  div{
+  background-color:rgba(23,2,23,0.9);
+  width:100%;
+  height:300px;
+  position: absolute;
+  top:0px;
+  /*for heading inside it*/
+  display:flex;
+  align-items:center;
+  justify-content:center;
+  font-size: 180%;
+  /*content: "Click To View";*/
+  /*for animation*/
+  left:-100%;
+  opacity:0;
+  visibility:hidden;
+  transition: all 0.6s ease-in-out;
+} 
+#gallery_container div#gallery_row1 div#arts_gallery:hover div,#gallery_container div#gallery_row1 div#animals_gallery:hover div,#gallery_container div#gallery_row1 div#birds_gallery:hover div,#gallery_container div#gallery_row2 div#egypt_gallery:hover div,#gallery_container div#gallery_row2 div#fossils_gallery:hover div,#gallery_container div#gallery_row2 div#insects_gallery:hover div{
+  left:0;
+  visibility: visible;
+  opacity:0.7;
+}
+#gallery_container a{text-decoration: none; color:rgba(255,250,255,1);}
+#gallery_container img{width:100%;height:300px;}
+
+/*--------------------------------------------------------------------------------------*/
+                                     /*CSS TO FOOTER*/
+/*--------------------------------------------------------------------------------------*/
+
+/*container*/
+#footer_container{background-color:#404040;height:500px;}
+/*visit number*/
+#footer_container div#visit_number{background-color:;width:100%;height:100px;display:flex;align-items:center;justify-content:center;border-bottom:3px solid rgba(0,0,0,0.5)}
+#footer_container div#visit_number label{font-size: 200%;color:rgba(250,235,240,0.9);}
+/*footer logo*/
+#footer_container div#footer_logo{background-color:;width:25%;height:300px;float:left;}
+#footer_container div#footer_logo div:first-child{background-color:;height:100px;display:flex;align-items:center;justify-content:center}
+#footer_container div#footer_logo div:first-child label{font-size: 140%;color:white;border-bottom:3px solid orange;padding-bottom:20px}
+#footer_container div#footer_logo div:last-child{background-color:;height:200px;display:flex;align-items:center;justify-content:center}
+#footer_container div#footer_logo div:last-child img{width: 100px;height:100px;opacity:0.7;}
+/*footer link*/
+#footer_container div#footer_link{background-color:;width:25%;height:400px;float:left}
+#footer_container div#footer_link div:first-child{background-color:;height:100px;display:flex;align-items:center;}
+#footer_container div#footer_link div:first-child label{font-size:140%;color:white;border-bottom:3px solid orange;padding-bottom:20px;width:70%;}
+#footer_container div#footer_link div:last-child{background-color:;height:300px;}
+#footer_container div#footer_link div:last-child a{color:rgba(235,235,235,0.7);text-decoration:none}
+/*footer address*/
+#footer_container div#footer_address{background-color:;width:25%;height:400px;float:left}
+#footer_container div#footer_address div:first-child{background-color:;height:100px;display:flex;align-items:center;}
+#footer_container div#footer_address div:first-child label{font-size:140%;color:white;border-bottom:3px solid orange;padding-bottom:20px;width:100%}
+#footer_container div#footer_address div:last-child{background-color:;height:300px}
+#footer_container div#footer_address div:last-child label{color:rgba(235,235,235,0.7)}
+/*footer social media*/
+#footer_container div#footer_social_media{background-color:;width:25%;height:400px;float:left;}
+#footer_container div#footer_social_media div:first-child{background-color:;height:100px;display:flex;align-items:center;justify-content:center}
+#footer_container div#footer_social_media div:first-child label{font-size:140%;color:white;border-bottom:3px solid orange;padding-bottom:20px;}
+#footer_container div#footer_social_media div:last-child{background-color:;height:300px;text-align:center;}
+#footer_container div#footer_social_media div:last-child img{width: 180px;height:280px;border-radius:50%}
+/*footer 2*/
+#footer2{background-color:rgba(0,0,0,0.9);height:100px;}
+#footer2 label:first-child{color:rgba(235,235,235,0.7);font-size: 150%;position: relative;top:30%}
+#footer2 label:last-child{color:orange;opacity:0.8;font-size: 200%;position: relative;top:30%}
+
+
+/*--------------------------------------------------------------------------------------*/
+/*--------------------------------------------------------------------------------------*/
